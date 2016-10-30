@@ -6,7 +6,7 @@
 # Our play on today's drive consists in programatically mimic his/her speech.
 
 # First of all, the plates in a list. 
-# "Bravas" are potatoes. In fact, the full term "patatas bravas" this kind of bravery is about spiciness.
+# "Bravas" are potatoes. In fact, the full term is "patatas bravas". This kind of bravery stands for spiciness.
 # "Calamares" are rings of squid. You know, "calamari" as usual buf fried in olive oil.
 # "Pulpo" is octopus.
 # "Acedias" and "pijotas" are fish delicatessen. Best from the sea you ever tasted.
