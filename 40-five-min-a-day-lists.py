@@ -72,7 +72,9 @@ print()
 # For the english approach we'll prefix names with arbitrary adjectives just for fun.
 # This will be done via a dictionary as the Python language lacks the "select/case" structure:
 #
-# Begin of the complete source code. This is the final version, you may remove all the code above.
+# Beginning of the complete source code. 
+# This is the final version, you may remove all the code above for your test.
+
 #!/usr/bin/env python3
 """ Tapas Bar for english speaking people """
 
