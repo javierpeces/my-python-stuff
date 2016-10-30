@@ -7,8 +7,8 @@
 
 # First of all, the plates in a list. 
 # "Bravas" are potatoes. In fact, the full term is "patatas bravas". This kind of bravery stands for spiciness.
-# "Calamares" are rings of squid. You know, "calamari" as usual buf fried in olive oil.
-# "Pulpo" is octopus.
+# "Calamares" are rings of squid. You know, "calamari" as usual, but fried in olive oil.
+# "Pulpo" is octopus. Usually comes from Galicia, northwest Spain. Yes, somehow related to Wales.
 # "Acedias" and "pijotas" are fish delicatessen. Best from the sea you ever tasted.
 # "Cecina" is dried and smoked meat.
 # "Jamón" should always match "de pata negra" because of the black coloured hoof. Best from the grassland.
@@ -120,6 +120,7 @@ for plate in tapas:
 print(".")
 
 # The output of this:
+#
 # We got beautiful bravas, delicious calamares, magnificent pulpo, marvellous chopitos, 
 # beautiful acedías, beautiful pijotas, mouthwatering cecina, wonderful jamón and wonderful salpicón.
 #
