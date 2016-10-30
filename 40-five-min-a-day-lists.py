@@ -51,7 +51,7 @@ for plate in tapas:
 
 print()
 
-# But a spanish waiter will never speak this simple. 
+# Being correct, a spanish waiter will never talk to you as simple as the above. 
 # He/she will always add an article before each meal,
 # choosing the appropriate one depending of the gender of the tapa.
 #
