@@ -54,11 +54,12 @@ print()
 # But a spanish waiter will never speak this simple. 
 # He/she will always add an article before each meal,
 # choosing the appropriate one depending of the gender of the tapa.
-# Yes, in spanish almost everything has a gender.
-# And this is not all. Reference to most things is done using a conventional number,
-# one or many, singular or plural.
+#
+# Yes, in spanish almost everything has a gender. And we are not finished yet. 
+# References to most things are performed using a convention 
+# with different format depending of number: one or many, singular or plural.
 # 
-# To make it simple, in the spanish version (see blog) we are following this criteria:
+# For learning purposes, in the spanish version (see blog) we are following this criteria:
 #
 # · Female ends in “a”
 # · Male ends in en “o”
