@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
 # Picture yourself in a tapas bar in Andalusia, Spain.
-# A waiter will tell you, as fast as he/she can,
+# A waiter or waitress will tell you, as fast as he/she can,
 # what tapas they have in the bar to enjoy.
-# Our play on today consists in programatically mimic his speech.
+# Our play on today's drive consists in programatically mimic his/her speech.
 
 # First of all, the plates in a list. 
 # "Bravas" are potatoes. In fact, the full term "patatas bravas" this kind of bravery is about spiciness.
