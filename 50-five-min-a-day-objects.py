@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 
 #
-#
-#
+# A fantastic tutorial here: 
+# https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/
+# This code (and the blog's one) is based on the contents of that page.
+# Sample 'bad-bank' account management. No commissions, even in case of (unsupported) negative balance.
 #
 
 class Customer(object):
