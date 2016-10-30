@@ -20,8 +20,8 @@ tapas = ["bravas", "calamares", "pulpo", "chopitos", "acedías", "pijotas", "cec
 
 print("We got", end=" ")
 
-for plato in tapas:
-     print(plato, end=" ")
+for plate in tapas:
+     print(plate, end=" ")
 
 print
 
@@ -38,7 +38,7 @@ print("We got", end=" ")
 index = 1
 final = ", "
 
-for plato in tapas:
+for plate in tapas:
 
     if index == len(tapas):
         final = "."
@@ -46,7 +46,7 @@ for plato in tapas:
     if index == len(tapas) - 1:
         final = " and "
 
-    print(plato, end=final)
+    print(plate, end=final)
     indice += 1
 
 print()
@@ -98,7 +98,7 @@ print("We got", end=" ")
 index = 1
 final = ", "
 
-for plato in tapas:
+for plate in tapas:
 
     if index == len(tapas):
         final = ""
@@ -106,14 +106,14 @@ for plato in tapas:
     if index == len(tapas) - 1:
         final = " and "
 
-    latest = plato[-1:]
+    latest = plate[-1:]
 
     if latest == "s":
-        article = plural(plato[-2:])
+        article = plural(plate[-2:])
     else:
         article = singular(latest)
 
-    print(article + " " + plato, end=final)
+    print(article + " " + plate, end=final)
     index += 1
 
 print(".")
