@@ -7,7 +7,8 @@ sourcelist = ["Humpty", "Dumpty", "sat", "on", "a", "wall"]
 targetstr1 = " ".join( sourcelist )
 
 #
-# No strange things above. The sourcelist becomes a string separated by spaces.
+# No strange things above. The sourcelist becomes a string
+# that contains all the list elements separated by spaces.
 # But the magic comes below: a list created with a for loop.
 # Amazing:
 # - Get a char c from targetstr1
