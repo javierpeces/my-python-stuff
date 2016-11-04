@@ -1,10 +1,30 @@
 #!/usr/bin/env python
 # FMAD stands for 'five-minutes-a-day' but TBH I'm dedicating more than that.
+""" hit and run and return """
 
-p = subprocess.Popen(cmdargs, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-f = "{} | {}"
 
-for i, line in enumerate(p.stdout.readlines()):
-    print(f.format(i, line.rstrip().decode("utf-8"))
+import subprocess
+
+args = ["ls", "-l", "/nohaytmp"]
+p = subprocess.run(args, stdin=None, input=None, stdout=subprocess.PIPE, stderr=subprocess.PIPE, 
+    shell=False, timeout=None, check=False, universal_newlines=True)
+
+# print("rc is ".format(p.returncode))
+print(p)
+
+rc = p.returncode
+
+if rc == 0:
+    print("bien. rc is {:04d}".format(rc))
+    # for line in p.stdout.readlines().decode("utf-8"):
+    #     print(line) 
+    for item, line in enumerate(p.stdout.split("\n")):
+        print("#{:02d}: '{}'".format(item,line))
+else:
+    print("male. rc is {:04d}".format(rc))
+    for item, line in enumerate(p.stderr.split("\n")):
+        print("#{:02d}: '{}'".format(item,line))
+
+# Works "if not p.returncode:" as well
     
 print("The end")
