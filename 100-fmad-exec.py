@@ -9,15 +9,12 @@ args = ["ls", "-l", "/nohaytmp"]
 p = subprocess.run(args, stdin=None, input=None, stdout=subprocess.PIPE, stderr=subprocess.PIPE, 
     shell=False, timeout=None, check=False, universal_newlines=True)
 
-# print("rc is ".format(p.returncode))
 print(p)
 
 rc = p.returncode
 
 if rc == 0:
     print("bien. rc is {:04d}".format(rc))
-    # for line in p.stdout.readlines().decode("utf-8"):
-    #     print(line) 
     for item, line in enumerate(p.stdout.split("\n")):
         print("#{:02d}: '{}'".format(item,line))
 else:
