@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 # Picture yourself in a tapas bar in Andalusia, Spain.
 # A waiter or waitress will tell you, as fast as he/she can,
@@ -47,7 +48,7 @@ for plate in tapas:
         final = " and "
 
     print(plate, end=final)
-    indice += 1
+    index += 1
 
 print()
 

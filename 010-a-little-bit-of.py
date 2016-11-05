@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 # Python looks like a powerful programming language. It is fully object oriented, so you may easily use 
 # the notation “object.property” to access all the available features of a given thing. 

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 # Spending five minutes a day in Python, a language that I didn’t practise a lot. A purpose like any other.
 # Today we will split phrases in words. The goal is processing those words one by one.
 

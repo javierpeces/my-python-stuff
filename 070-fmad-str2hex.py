@@ -1,4 +1,6 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 #
 # Remember the shell script fight to convert a string to its hex equivalent?
 # Let's see how to manage the same in Python.

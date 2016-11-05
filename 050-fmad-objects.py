@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 #
 # A fantastic tutorial here: 
@@ -28,7 +29,7 @@ class Customer(object):
 
     def money_withdraw(self, amount):
         """ Returns the available after withdraw """
-        if cantidad > self.balance:
+        if amount > self.balance:
             raise RuntimeError('Amount greater than the available one.')
         self.balance -= amount
         print("withdraw: %d" % amount)
@@ -39,7 +40,7 @@ class Customer(object):
         """ Returns the available after deposit """
         self.balance += amount
         print("deposit: %d" % amount)
-        print("saldo actual: %d" % self.balance)
+        print("current balance: %d" % self.balance)
         return self.balance
 
 """
@@ -48,7 +49,7 @@ class Customer(object):
 
 
 if __name__ == "__main__":
-    firstcustomer = Cliente("12345678A", "Juan Español")
+    firstcustomer = Customer("12345678A", "Juan Español")
     firstcustomer.set_initial_balance( 1000.00 )
     print(firstcustomer.money_withdraw( 300.00 ))
     print(firstcustomer.money_deposit( 555.50 ))

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 #
 # Yesterday's research showed the way to split a phrase in words, generating an easily usable list.
 # Before yesterday we read lines from a text file. Combining both samples we get lines one by one, 

@@ -1,11 +1,12 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 # FMAD stands for 'five-minutes-a-day' but TBH I'm dedicating more than that.
 """ hit and run and return """
 
 
 import subprocess
 
-args = ["ls", "-l", "/nohaytmp"]
+args = ["ls", "-l", "/tmp"]
 p = subprocess.run(args, stdin=None, input=None, stdout=subprocess.PIPE, stderr=subprocess.PIPE, 
     shell=False, timeout=None, check=False, universal_newlines=True)
 
