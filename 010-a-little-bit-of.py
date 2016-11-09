@@ -61,5 +61,11 @@ list = open("data.txt").readlines()
 
 for i in range(0, len(list)):
     print(str(i) + ": " + list[i].rstrip("\n"))
-    
+
+# UPDATE
+# The pythonic version of this loop.
+
+for i, item in enumerate(list):
+    print("item {:2d} contains {}".format(i, item))
+
 # That’s all by now. Hope this has been useful…
