@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
 """
     The final goal is finding free addresses in a network range
     Not finished but you may see how it looks like
-
 """
 
 import sys
@@ -87,3 +85,6 @@ if __name__ == "__main__":
             print("\tItem #{:02d} contains '{}'".format(outitem, outline))
 
     print("Ended {} with code {}".format(sys.argv[0], retcode))
+
+""" THE END
+"""
