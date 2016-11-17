@@ -28,8 +28,13 @@ def execthis(cmdargs, pattern):
     """
 
     rc = p.returncode
+    
+    """ friendly pythonic suggestion: replace assignment
     output = []
     output.append(rc)
+    """
+    
+    output = [rc]
 
     """ in case of success, the subprocess returns zero, so "not rc" is true 
         and flow goes thru the "if"; in case of error will go thru the "else"
@@ -37,7 +42,7 @@ def execthis(cmdargs, pattern):
 
     if not rc:
         for item, line in enumerate(p.stdout.split("\n")):           
-            if(pattern in line):
+            if pattern in line:
                 words = line.split(" ")
                 output.append(words[len(words) - 1])
     else:
