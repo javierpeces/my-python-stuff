@@ -5,8 +5,8 @@ import sys
 """ calculate how many words contain a given letter """
 
 def myfunction(haystack, needle):
-
-    print("looking for this needle: {} in this stack: {}")
+    
+    print("Looking for this needle: {} in this haystack: {}".format(needle, haystack))
 
     rc = 0
     rv = []
@@ -22,12 +22,14 @@ def myfunction(haystack, needle):
 """ the true stuff """
 
 if __name__ == "__main__":
-    print("Started " + sys.argv[0] + "...")
+    
+    myself = sys.argv[0]
+    print("Started {}".format(myself))
     
     universe = ["madrid", "toledo", "ciudad real", "cuenca", "guadalajara"]
     lookfor = "a"
     retcode, retvalue = myfunction(universe, lookfor)
 
-    print("Ended {} with code {} and contents: {}".format(sys.argv[0], retcode, retvalue))
+    print("Ended {} with code {} and contents: {}".format(myself, retcode, retvalue))
 
 # the end
