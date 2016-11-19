@@ -29,7 +29,7 @@ def execthis(cmdargs, pattern):
     """
 
     rc = p.returncode
-    output = [rc]
+    rv = []
 
     """ in case of success, the subprocess returns zero, so "not rc" is true
         and flow goes through the "if"; in case of error will run the "else"
@@ -39,12 +39,12 @@ def execthis(cmdargs, pattern):
         for item, line in enumerate(p.stdout.split("\n")):
             if pattern in line:
                 words = line.split(" ")
-                output.append(words[len(words) - 1])
+                rv.append(words[len(words) - 1])
     else:
         for item, line in enumerate(p.stderr.split("\n")):
-            output.append(line)
+            rv.append(line)
 
-    return output
+    return rc, rv
 
 
 """
@@ -53,8 +53,9 @@ def execthis(cmdargs, pattern):
 
 if __name__ == "__main__":
 
-    print("Started " + sys.argv[0] + "...")
-    retcode = 0
+    myself = sys.argv[0]
+    print("Started {}...".format(myself))
+    rc = 0
 
     for index, item in enumerate(sys.argv[1:]):
 
@@ -62,41 +63,37 @@ if __name__ == "__main__":
             check it's installed in your system
         """
 
-        scan = ["nmap", "-sL", "-n", str(item)]
-        scanproc = execthis(scan, "Nmap scan report for")
-        retcode = scanproc[0]
+        cmdargs = ["nmap", "-sL", "-n", str(item)]
+        rc, rv = execthis(cmdargs, "Nmap scan report for")
 
         """ now check nmap's return code
         """
 
-        if retcode:
-            print("ARGH! Rc is {:04d}".format(retcode))
+        if rc:
+            print("ARGH! Rc is {:04d}".format(rc))
 
         """ print the address list in case of success, or the stderr contents if something goes wrong
         """
 
-        for outline in enumerate(scanproc[1:]):
+        for outline in enumerate(rv):
 
             """ arp-scan tests each address for presence or absence of a system
                 again, check it's installed
             """
             print(outline)
-            arpscan = ["sudo", "arp-scan", outline[1]]
-            arpproc = execthis(arpscan, outline[1])
-            retcode2 = arpproc[0]
+            ipaddress = outline[1]
+            cmdargs2 = ["sudo", "arp-scan", ipaddress]
+            rc2, rv2 = execthis(cmdargs2, ipaddress)
 
-            if not retcode2:
-
+            if not rc2:
                 if len(arpproc) > 1:
                     print("USED... ", end="")
-
                 else:
                     print("FREE... {}".format(outline))
-
             else:
-                print("ARGH! Rc is {:04d}".format(retcode))
+                print("ARGH! Rc is {:04d}".format(rc2))
 
-    print("Ended {} with code {}".format(sys.argv[0], retcode))
+    print("Ended {} with code {}".format(myself, rc2))
 
 """ THE END
 """
