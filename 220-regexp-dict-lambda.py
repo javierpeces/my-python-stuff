@@ -62,10 +62,10 @@ except AttributeError:
     -----------------------------------------------------------------
 """
 
-if dirDomain == "cash-default":
-	dirDomain = "cash.ch"
-if dirDomain == "cashzweiplus":
-	dirDomain = "cashzweiplus.ch"
+if dirDomain == "XXXX":
+	dirDomain = "XXXX.ch"
+if dirDomain == "YYYY":
+	dirDomain = "YYYY.ch"
 if dirDomain == "":
 	dirDomain = "ERRRORRR"
 print( "; direct domain '" + dirDomain + "'" )
