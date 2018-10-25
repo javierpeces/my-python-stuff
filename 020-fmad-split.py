@@ -19,9 +19,13 @@ for word in words:
 # You may also use a range for smaller and faster code.
 #
 
-for i in range(1, numofwords):
+print( "Now for a range" )
+
+for i in range(0, numofwords):
     print("word # " + str(i) + " is '" + words[i] + "'")
     
 #
 # See the usage of single quotes in a string delimited by double quotes.
 #
+
+print( "This: < {:s} >".format( words ) )
