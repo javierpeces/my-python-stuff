@@ -73,7 +73,7 @@ def createListFromFile( filename ):
 
         return returnList
     except IOError as e:
-        print( "; An i/o error occurred opening {}. Exiting.".format( pn ) )
+        print( "; An i/o error occurred opening {}. Exiting.".format( filename ) )
         errno, strerror = e.args
         print( "Error {:d} > {:s}".format( errno, strerror ) )
         exit( errno )
@@ -88,7 +88,7 @@ if __name__ == "__main__":
     logging.debug('This is a log message.')
 
     # haystackList = { "a", "ante", "bajo", "cabe" }  # this is the list we have to search in
-    # needleList   = { "ante", "cabe" }               # this are the items we are looking for
+    # needleList   = { "ante", "cabe" }               # these are the items we are looking for
 
     needleList = createListFromFile( "needle.txt" )
     haystackList = createListFromFile( "haystack.txt" )
