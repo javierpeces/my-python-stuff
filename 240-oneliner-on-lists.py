@@ -16,14 +16,14 @@ if __name__ == "__main__":
   #
   
   slist = { 0: "a", 1: "ante", 2: "bajo", 3: "cabe", 4: "con", 5: "contra", 6: "de", 7: "desde" }
-  for key, item in slist.items( ):
-    print( "The key {} has value {}".format( key, item ) )
+  for key, val in slist.items( ):
+    print( "The key {} has value {}".format( key, val ) )
     
   #
   # Python loop doing the same
   #
   
-  dummy = [ print( "K {} V {}".format( key, val ) ) for key, val in slist.items( ) if val != "cabe" ]
+  dummy = [ print( "Key {} Val {}".format( key, val ) ) for key, val in slist.items( ) if val != "cabe" ]
   
   #
   # That's all folks
