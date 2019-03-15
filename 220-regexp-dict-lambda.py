@@ -12,7 +12,10 @@ import os.path
 from socket import inet_aton
 import struct
 
-""" define regexps """
+
+""" -----------------------------------------------------------------
+	 define regexps 
+"""
 
 expComment = re.compile( '^.*;' )
 expArecord = re.compile( '.*IN.*A.*' )
@@ -30,8 +33,8 @@ if argc < 3:
 	print( "; three args needed. Exiting." )
 	exit( 1 )
 else:
-	dirName = sys.argv[1]
-	revName = sys.argv[2]
+	dirName = sys.argv[ 1 ]
+	revName = sys.argv[ 2 ]
 	print( "; direct file name", dirName )
 	print( "; reverse file name", revName )
 
@@ -50,7 +53,7 @@ if not os.path.exists( dirName ) or not os.path.exists( revName ):
 """
 
 try:
-	dirDomain = re.search('zone\.(.+?)\.db', dirName).group(1)
+	dirDomain = re.search( 'zone\.(.+?)\.db', dirName ).group( 1 )
 
 except AttributeError:
 	print( "; direct domain name", dirDomain, "not valid. Exiting." )
